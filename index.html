@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Synergy India Solutions - Simplifying India for Global Businesses</title>
+  <meta name="description" content="Comprehensive corporate, tax, HR & compliance solutions for international companies entering or expanding in India." />
+  <link rel="canonical" href="https://www.synergy-india.com/" />
+  <style>
+    :root {
+      --primary-blue: #1164B4;
+      --primary-green: #0DAD8D;
+      --bg-light-blue: #8DD8CC;
+      --text-dark: #0D4E4D;
+      --text-light: #FFFFFF;
+      --footer-bg: #0D4E4D;
+      --footer-text: #E0E0E0;
+      --footer-muted: #A0A0A0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: #fff; line-height: 1.6; }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; }
+    header { background: var(--text-light); box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+    .nav-wrapper { display: flex; justify-content: space-between; align-items: center; height: 60px; }
+    .logo { font-size: 1.5rem; font-weight: bold; color: var(--primary-blue); text-decoration: none; }
+    nav ul { display: flex; gap: 1.5rem; list-style: none; }
+    nav a { text-decoration: none; color: var(--text-dark); transition: color .3s; }
+    nav a:hover { color: var(--primary-blue); }
+    .mobile-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--text-dark); }
+    section { padding: 60px 0; }
+    #hero { background: url('path-to-india-skyline.jpg') center/cover no-repeat; position: relative; color: var(--text-light); text-align: center; }
+    #hero .overlay { position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+    #hero .hero-content { position: relative; padding: 100px 20px; }
+    #hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    #hero p { font-size: 1.1rem; margin-bottom: 2rem; }
+    .btn { display: inline-block; padding: .75rem 1.5rem; border-radius: 4px; font-weight: 600; text-decoration: none; transition: background .3s, color .3s; }
+    .btn-primary { background: var(--primary-blue); color: var(--text-light); }
+    .btn-primary:hover { background: #0f5a93; }
+    .btn-secondary { border: 2px solid var(--primary-green); color: var(--primary-green); }
+    .btn-secondary:hover { background: var(--primary-green); color: var(--text-light); }
+    .grid { display: grid; gap: 2rem; }
+    .cards-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .card { background: var(--text-light); padding: 2rem; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); transition: box-shadow .3s; }
+    .card:hover { box-shadow: 0 4px 8px rgba(0,0,0,0.15); }
+    .card-icon { width: 48px; height: 48px; background: var(--bg-light-blue); border-radius: 50%; margin-bottom: 1rem; }
+    h2.section-title { text-align: center; font-size: 2rem; margin-bottom: 2rem; }
+    footer { background: var(--footer-bg); color: var(--footer-text); }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; padding: 40px 0; }
+    .footer-logo { font-size: 1.75rem; font-weight: bold; color: var(--text-light); text-decoration: none; }
+    .social-icons { display: flex; gap: 1rem; margin-top: 1rem; }
+    .social-icons a img { width: 24px; height: 24px; filter: brightness(0) invert(1); }
+    .footer-grid h3 { margin-bottom: 1rem; font-size: 1.1rem; color: var(--text-light); }
+    .footer-grid p, .footer-grid a { color: var(--footer-text); font-size: 0.9rem; line-height: 1.4; }
+    .footer-grid a:hover { color: var(--text-light); }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 20px 0; text-align: center; font-size: 0.8rem; color: var(--footer-muted); }
+    @media (max-width: 768px) {
+      .mobile-toggle { display: block; }
+      nav ul { display: none; position: absolute; top: 60px; right: 20px; background: var(--text-light); flex-direction: column; width: 200px; padding: 1rem; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+      nav ul.show { display: flex; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav-wrapper">
+      <a href="#" class="logo">Synergy India Solutions</a>
+      <button class="mobile-toggle" id="menu-toggle">☰</button>
+      <nav>
+        <ul id="menu">
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#resources">Resources</a></li>
+          <li><a href="#case-study">Case Studies</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero">
+    <div class="overlay"></div>
+    <div class="container hero-content">
+      <h1>Simplifying India for Global Businesses</h1>
+      <p>Comprehensive corporate, tax, HR & compliance solutions tailored for international companies entering or expanding in India.</p>
+      <a href="#contact" class="btn btn-primary">Talk to an Expert</a>
+      <a href="#resources" class="btn btn-secondary">Download India Entry Guide</a>
+    </div>
+  </section>
+
+  <section id="why-us" style="background: var(--bg-light-blue);">
+    <div class="container">
+      <h2 class="section-title">Why Work with Synergy?</h2>
+      <div class="grid cards-4">
+        <div class="card">
+          <div class="card-icon"></div>
+          <h3>Expert India-Based Team</h3>
+          <p>Local knowledge, global quality</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"></div>
+          <h3>Single-Point Support</h3>
+          <p>End-to-end assistance</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"></div>
+          <h3>Transparent Pricing</h3>
+          <p>No hidden charges</p>
+        </div>
+        <div class="card">
+          <div class="card-icon"></div>
+          <h3>Scalable Solutions</h3>
+          <p>For startups to large enterprises</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="section-title">Our Services</h2>
+      <div class="grid cards-4">
+        <div class="card">
+          <h3>India Incorporation</h3>
+          <p>Legal entity setup including Pvt Ltd, LLP, Branch Office, etc.</p>
+          <a href="#" class="btn btn-secondary">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>Virtual CFO Services</h3>
+          <p>Accounting, reporting, GST, tax compliance</p>
+          <a href="#" class="btn btn-secondary">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>Expansion Advisory & Sourcing</h3>
+          <p>Guidance on greenfield expansion, supply chain, vendor partnerships</p>
+          <a href="#" class="btn btn-secondary">Learn More</a>
+        </div>
+        <div class="card">
+          <h3>Imports & Logistics</h3>
+          <p>Assist with import licensing, warehousing, and freight handling</p>
+          <a href="#" class="btn btn-secondary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" style="background: var(--bg-light-blue);">
+    <div class="container text-center">
+      <h2 class="section-title">How It Works</h2>
+      <div class="grid" style="gap: 3rem;">
+        <div>
+          <h3>Plan & Structure</h3>
+          <p>Define legal/tax structure</p>
+        </div>
+        <div>
+          <h3>Establish & Setup</h3>
+          <p>Registration, team, compliance</p>
+        </div>
+        <div>
+          <h3>Manage & Grow</h3>
+          <p>HR, payroll, filings, reporting</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="case-study">
+    <div class="container">
+      <h2 class="section-title">Case Studies</h2>
+      <div class="grid cards-4">
+        <div class="card">
+          <h3>Rapid Entity Setup for Tech Startup</h3>
+          <p>Incorporation in under 30 days, including regulatory filings and bank account setup.</p>
+          <a href="/case-studies/rapid-entity-setup" class="btn btn-secondary">Read More →</a>
+        </div>
+        <div class="card">
+          <h3>Virtual CFO for Manufacturing Firm</h3>
+          <p>End-to-end finance outsourcing, GST compliance, and monthly management reporting.</p>
+          <a href="/case-studies/virtual-cfo" class="btn btn-secondary">Read More →</a>
+        </div>
+        <div class="card">
+          <h3>FEMA Compliance for Investment Fund</h3>
+          <p>Assisted with ECB filings and FEMA compliance for seamless capital repatriation.</p>
+          <a href="/case-studies/fema-compliance" class="btn btn-secondary">Read More →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="resources" style="background: var(--bg-light-blue);">
+    <div class="container">
+      <h2 class="section-title">Free Resources & Insights</h2>
+      <div class="grid cards-4">
+        <div class="card">
+          <h3>India Entry Playbook</h3>
+          <p><a href="/resources/india-entry-playbook.pdf" class="btn btn-secondary">Download PDF</a></p>
+        </div>
+        <div class="card">
+          <h3>Payroll & PEO Guide</h3>
+          <p><a href="/resources/payroll-peo-guide.pdf" class="btn btn-secondary">Download PDF</a></p>
+        </div>
+        <div class="card">
+          <h3>GST & Taxation Explainer</h3>
+          <p><a href="/resources/gst-taxation-explainer.pdf" class="btn btn-secondary">Download PDF</a></p>
+        </div>
+        <div class="card">
+          <h3>Licensing & Incorporation Handbook</h3>
+          <p><a href="/resources/licensing-incorporation-handbook.pdf" class="btn btn-secondary">Download PDF</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Ready to Expand into India?</h2>
+      <form action="/contact" method="POST" style="max-width:500px; margin:auto; display:grid; gap:1rem;">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="text" name="company" placeholder="Company" required>
+        <input type="text" name="country" placeholder="Country" required>
+        <textarea name="message" rows="4" placeholder="Message"></textarea>
+        <button type="submit" class="btn btn-primary">Get a Free Consultation</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <a href="/" class="footer-logo">Synergy India Solutions</a>
+        <p>Comprehensive corporate, tax, HR & compliance solutions for global businesses.</p>
+        <div class="social-icons">
+          <a href="#"><img src="/icons/linkedin.svg" alt="LinkedIn"></a>
+          <a href="#"><img src="/icons/twitter.svg" alt="Twitter"></a>
+          <a href="#"><img src="/icons/youtube.svg" alt="YouTube"></a>
+          <a href="#"><img src="/icons/instagram.svg" alt="Instagram"></a>
+        </div>
+      </div>
+      <div>
+        <h3>Our Locations</h3>
+        <p>Suite 101, Infinity Tower, Bandra Kurla Complex, Mumbai, India</p>
+        <p>202, Business Hub, Cyber City, Gurgaon, India</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <p><a href="#why-us">Why Us</a></p>
+        <p><a href="#services">Services</a></p>
+        <p><a href="#case-study">Case Studies</a></p>
+        <p><a href="#contact">Contact</a></p>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <p><a href="mailto:info@synergy-india.com">info@synergy-india.com</a></p>
+        <p>+91-XXXXXXXXXX</p>
+        <p><a href="/privacy-policy">Privacy Policy</a></p>
+        <p><a href="/terms">Terms of Service</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      © 2025 Synergy India Solutions Pvt Ltd. All rights reserved.
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('menu').classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
