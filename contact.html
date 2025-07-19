@@ -70,7 +70,7 @@
   </section>
 
   <section class="container form-section">
-    <form action="/submit-lead" method="POST">
+    <form id="lead-form" action="/submit-lead" method="POST">
       <div>
         <label for="name">Name</label>
         <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -93,13 +93,46 @@
       </div>
       <button type="submit" class="btn btn-submit">Submit Inquiry</button>
     </form>
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbw3attGkrqIqcKnsNc7iYwG8BqVRQWp74Tb9R9rWdI7uVMmaa4CKhJAijl-QP8prHFFQQ/exec';
+  document.getElementById('lead-form').addEventListener('submit', e => {
+    e.preventDefault();
+    const form = e.target;
+    const data = {
+      name: form.name.value,
+      email: form.email.value,
+      company: form.company.value,
+      country: form.country.value,
+      message: form.message.value
+    };
+    fetch(scriptURL, {
+      method: 'POST',
+      body: JSON.stringify(data),
+      headers: {'Content-Type': 'application/json'}
+    })
+    .then(res => res.json())
+    .then(response => {
+      if (response.status === 'success') {
+        alert('Thank you! Your inquiry has been submitted.');
+        form.reset();
+      } else {
+        alert('Oops! Something went wrong: ' + response.message);
+      }
+    })
+    .catch(err => {
+      alert('Error submitting form: ' + err);
+    });
+  });
+</script>
   </section>
+  
 
   <!-- Discovery Call Section -->
   <section class="container" style="text-align:center; padding:60px 0;">
     <h2 style="color:var(--primary-blue); font-size:2rem; margin-bottom:1rem;">Book a Discovery Call</h2>
     <p style="max-width:700px; margin:0 auto 2rem;">Schedule a 30-minute consultation with our India experts to discuss your expansion goals and how we can help.</p>
-    <a href="/book-discovery-call" class="btn btn-call" style="font-size:1rem; padding:0.75rem 2rem;">Book Now →</a>
+    <a href="http://calendly.com/ambarmehta13" class="btn btn-call" style="font-size:1rem; padding:0.75rem 2rem;">Book Now →</a>
   </section>
 
   <footer>
