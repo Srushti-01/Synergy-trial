@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imports & Logistics | Synergy India Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+    /* Reset & Variables */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --color-primary: #004AAD;
+      --color-accent: #FF784B;
+      --color-text: #2D334A;
+      --color-bg: #FFFFFF;
+      --font-heading: 'Poppins', sans-serif;
+      --font-body: 'Inter', sans-serif;
+      --spacing: 1rem;
+      --spacing-lg: 2rem;
+      --breakpoint-sm: 600px;
+      --breakpoint-md: 768px;
+    }
+    body { font-family: var(--font-body); color: var(--color-text); background: var(--color-bg); line-height: 1.6; }
+    a { text-decoration: none; color: var(--color-primary); }
+    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: var(--spacing-lg) 0; }
+    .material-icons.icon { vertical-align: middle; font-size: 2rem; color: var(--color-primary); }
+
+    /* Header & Nav */
+    header { background: var(--color-bg); box-shadow: 0 2px 4px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 100; }
+    .header-inner { display: flex; align-items: center; justify-content: space-between; padding: var(--spacing); }
+    .logo img { height: 40px; }
+    nav ul { display: flex; gap: var(--spacing-lg); list-style: none; }
+    nav li a { font-weight: bold; padding: var(--spacing) var(--spacing-lg); }
+    .mobile-nav-toggle { display: none; background: none; border: none; font-size: 1.5rem; cursor: pointer; }
+
+    /* Hero Section */
+    .hero { padding: var(--spacing-lg) 0; background: url('https://source.unsplash.com/1600x600/?container,port') center/cover no-repeat; color: #fff; position: relative; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+    .hero .container { position: relative; z-index: 1; text-align: center; }
+    .hero h1 { font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: var(--spacing); }
+    .hero p { font-size: 1.125rem; margin-bottom: var(--spacing); max-width: 800px; margin: 0 auto; }
+    .btn-primary { display: inline-block; padding: 0.75rem 1.5rem; background: var(--color-primary); color: #fff; border-radius: 0.25rem; font-weight: bold; }
+
+    /* Pain Points */
+    .pain-points { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: var(--spacing-lg); margin: var(--spacing-lg) 0; }
+    .pain-item { background: #f9f9f9; padding: var(--spacing); border-radius: 0.5rem; text-align: center; }
+    .pain-item span { display: block; margin-bottom: var(--spacing); }
+
+    /* Deep Dive */
+    .deep-dive { display: flex; flex-wrap: wrap; gap: var(--spacing-lg); margin: var(--spacing-lg) 0; }
+    .deep-dive .text, .deep-dive .visual { flex: 1 1 300px; }
+    .deep-dive .text h2 { font-family: var(--font-heading); margin-bottom: var(--spacing-lg); font-size: 2rem; }
+    .deep-dive .text h3 { margin-top: var(--spacing); font-size: 1.25rem; }
+    .deep-dive .text p { margin-top: 0.5rem; }
+    .deep-dive .visual img { width: 100%; height: auto; border-radius: 0.5rem; }
+
+    /* Benefits Grid */
+    .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: var(--spacing-lg); margin: var(--spacing-lg) 0; }
+    .benefit-item { text-align: center; padding: var(--spacing-lg) var(--spacing); }
+    .benefit-item span { font-size: 2.5rem; display: block; margin-bottom: var(--spacing); color: var(--color-accent); }
+    .benefit-item h3 { margin-bottom: 0.5rem; font-size: 1.125rem; }
+
+    /* Timeline */
+    .timeline { display: flex; flex-direction: column; gap: var(--spacing); margin: var(--spacing-lg) 0; }
+    .timeline-step { display: flex; align-items: center; gap: var(--spacing); }
+    .timeline-step::before { content: attr(data-step); font-weight: bold; color: var(--color-accent); }
+
+    /* FAQ */
+    .faq { margin: var(--spacing-lg) 0; }
+    .faq-item + .faq-item { margin-top: var(--spacing); }
+    .faq-item summary { cursor: pointer; font-weight: bold; padding: var(--spacing); background: #f9f9f9; border-radius: 0.5rem; }
+    .faq-item p { padding: var(--spacing); }
+
+    /* Footer */
+    footer { background: #f1f1f1; padding: var(--spacing-lg) 0; text-align: center; font-size: 0.875rem; }
+
+    /* Responsive */
+    @media (max-width: var(--breakpoint-md)) {
+      .hero h1 { font-size: 2rem; }
+      .hero p { font-size: 1rem; }
+      .deep-dive { flex-direction: column; }
+      .container { padding: var(--spacing) 0; }
+      nav ul { display: none; }
+      .mobile-nav-toggle { display: block; }
+    }
+    @media (max-width: var(--breakpoint-sm)) {
+      nav li a { padding: var(--spacing) var(--spacing); }
+      .benefits { grid-template-columns: 1fr; }
+      .pain-points { grid-template-columns: 1fr; }
+      .faq-item summary { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="logo"><img src="https://via.placeholder.com/150x40?text=Synergy+Logo" alt="Synergy India Solutions"></a>
+      <button class="mobile-nav-toggle" aria-label="Open navigation">&#9776;</button>
+      <nav>
+        <ul>
+          <li><a href="incorporation.html">India Incorporation</a></li>
+          <li><a href="cfo.html">Virtual CFO Services</a></li>
+          <li><a href="imports.html" class="active">Imports & Logistics</a></li>
+          <li><a href="expansion.html">Expansion & Sourcing</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <h1>Seamless Imports & Logistics Support</h1>
+      <p>Bring your goods into India without delay, confusion, or unexpected fees. We simplify everything from customs clearance to last-mile delivery.</p>
+      <a href="#contact" class="btn-primary">Calculate Your Landed Cost</a>
+    </div>
+  </section>
+
+  <!-- Pain Points -->
+  <section class="container pain-points">
+    <div class="pain-item">
+      <span class="material-icons icon">help_outline</span>
+      <p>HS code confusion?</p>
+    </div>
+    <div class="pain-item">
+      <span class="material-icons icon">attach_money</span>
+      <p>Unpredictable landed cost?</p>
+    </div>
+    <div class="pain-item">
+      <span class="material-icons icon">timer</span>
+      <p>Port delays?</p>
+    </div>
+  </section>
+
+  <!-- Deep Dive -->
+  <section class="container deep-dive">
+    <div class="text">
+      <h2>Our Import Support Includes</h2>
+      <h3>Import License (IEC) Registration</h3>
+      <p>End-to-end IEC code registration and RBI liaison for import permissions.</p>
+      <h3>Customs Duty Advisory & Classification</h3>
+      <p>Accurate HS code classification and duty optimization services.</p>
+      <h3>Product Labelling & BIS Certification</h3>
+      <p>Guidance on mandatory labelling, packaging, and BIS approvals.</p>
+      <h3>Customs Clearance at All Major Ports & Airports</h3>
+      <p>Fast-track clearance via our network of licensed customs brokers.</p>
+      <h3>Warehousing & 3PL Coordination</h3>
+      <p>Secure storage and efficient 3PL management across India.</p>
+      <h3>Last-Mile Fulfilment & Reverse Logistics</h3>
+      <p>End-customer delivery solutions and returns handling.</p>
+      <h3>Import Compliance Audit & Documentation Support</h3>
+      <p>Periodic audits and full documentation management for compliance.</p>
+    </div>
+    <div class="visual">
+      <img src="https://source.unsplash.com/800x600/?warehouse,logistics" alt="Warehouse and logistics operations">
+    </div>
+  </section>
+
+  <!-- Benefits -->
+  <section class="container benefits">
+    <div class="benefit-item">
+      <span class="material-icons icon">attach_money</span>
+      <h3>Transparent Costing</h3>
+      <p>All-in landed cost estimates with no hidden fees.</p>
+    </div>
+    <div class="benefit-item">
+      <span class="material-icons icon">network_wifi</span>
+      <h3>Pan-India Network</h3>
+      <p>Coverage from Nhava Sheva to Chennai and beyond.</p>
+    </div>
+    <div class="benefit-item">
+      <span class="material-icons icon">track_changes</span>
+      <h3>Real-Time Tracking</h3>
+      <p>Monitor shipments and inventories via our tech platform.</p>
+    </div>
+    <div class="benefit-item">
+      <span class="material-icons icon">verified</span>
+      <h3>Avoid Delays & Penalties</h3>
+      <p>Proactive compliance checks to prevent costly hold-ups.</p>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="container timeline">
+    <div class="timeline-step" data-step="1."><p>Pre-Shipment Documentation</p></div>
+    <div class="timeline-step" data-step="2."><p>Customs Clearance</p></div>
+    <div class="timeline-step" data-step="3."><p>Warehousing & 3PL</p></div>
+    <div class="timeline-step" data-step="4."><p>Last-Mile Delivery</p></div>
+    <div class="timeline-step" data-step="5."><p>Ongoing Support & Audits</p></div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="container faq">
+    <details class="faq-item">
+      <summary>What is BIS certification?</summary>
+      <p>BIS certification is mandatory for certain electronic and IT products to ensure quality and safety standards.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Should I choose FCL or LCL?</summary>
+      <p>We analyze your volume and timelines to recommend Full Container Load or Less than Container Load.</p>
+    </details>
+    <details class="faq-item">
+      <summary>How do you avoid detention charges?</summary>
+      <p>Our proactive documentation and clearance audits minimize the risk of customs detention fees.</p>
+    </details>
+  </section>
+
+  <!-- Final CTA -->
+  <section id="contact" class="container" style="text-align: center; padding: var(--spacing-lg) 0;">
+    <h2>Ready to Import with Confidence?</h2>
+    <a href="mailto:contact@synergyindia.com" class="btn-primary">Get a Free Quote</a>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Synergy India Solutions — All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
