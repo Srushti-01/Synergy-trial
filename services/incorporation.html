@@ -1,203 +1,360 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>India Incorporation | Synergy India Solutions</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Poppins:wght@700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <style>
-    /* Reset & Variables */
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    :root {
-      --color-primary: #004AAD;
-      --color-accent: #FF784B;
-      --color-text: #2D334A;
-      --color-bg: #FFFFFF;
-      --font-heading: 'Poppins', sans-serif;
-      --font-body: 'Inter', sans-serif;
-      --spacing: 1rem;
-    }
-    body { font-family: var(--font-body); color: var(--color-text); background: var(--color-bg); line-height: 1.6; }
-    a { text-decoration: none; color: var(--color-primary); }
-    .container { width: 90%; max-width: 1200px; margin: 0 auto; padding: var(--spacing) 0; }
-    .material-icons.icon { vertical-align: middle; font-size: 2rem; color: var(--color-primary); }
-
-    /* Header & Nav */
-    header { background: var(--color-bg); padding: var(--spacing) 0; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
-    nav ul { display: flex; gap: var(--spacing); list-style: none; justify-content: center; }
-    nav li a { font-weight: bold; }
-
-    /* Hero Section */
-    .hero { padding: 4rem 0; background: url('https://source.unsplash.com/1600x600/?India,skyline') center/cover no-repeat; color: #fff; position: relative; }
-    .hero::before { content: ''; position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
-    .hero .container { position: relative; z-index: 1; text-align: center; }
-    .hero h1 { font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: var(--spacing); }
-    .hero p { font-size: 1.125rem; margin-bottom: var(--spacing); }
-    .btn-primary { display: inline-block; padding: 0.75rem 1.5rem; background: var(--color-primary); color: #fff; border-radius: 0.25rem; font-weight: bold; }
-
-    /* Pain Points */
-    .pain-points { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: var(--spacing); margin: var(--spacing) 0; }
-    .pain-item { background: #f9f9f9; padding: var(--spacing); border-radius: 0.5rem; text-align: center; }
-    .pain-item span { display: block; margin-bottom: 0.5rem; }
-
-    /* Deep Dive */
-    .deep-dive { display: flex; flex-wrap: wrap; gap: var(--spacing); margin: var(--spacing) 0; }
-    .deep-dive .text { flex: 1 1 300px; }
-    .deep-dive .text h2 { font-family: var(--font-heading); margin-bottom: var(--spacing); }
-    .deep-dive .text h3 { margin-top: var(--spacing); font-size: 1.125rem; }
-    .deep-dive .text p { margin-top: 0.5rem; }
-    .deep-dive .visual { flex: 1 1 300px; text-align: center; }
-    .deep-dive .visual img { max-width: 100%; border-radius: 0.5rem; }
-
-    /* Benefits Grid */
-    .benefits { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: var(--spacing); margin: var(--spacing) 0; }
-    .benefit-item { text-align: center; padding: var(--spacing); }
-    .benefit-item span { font-size: 2rem; display: block; margin-bottom: 0.5rem; color: var(--color-accent); }
-
-    /* Timeline */
-    .timeline { display: flex; flex-direction: column; gap: var(--spacing); margin: var(--spacing) 0; }
-    .timeline-step { display: flex; align-items: center; gap: 1rem; }
-    .timeline-step::before { content: attr(data-step); font-weight: bold; color: var(--color-accent); }
-
-    /* FAQ */
-    .faq { margin: var(--spacing) 0; }
-    .faq-item + .faq-item { margin-top: var(--spacing); }
-    .faq-item summary { cursor: pointer; font-weight: bold; }
-
-    /* Footer */
-    footer { background: #f1f1f1; padding: var(--spacing) 0; text-align: center; font-size: 0.875rem; }
-  </style>
+    <meta charset="UTF-8">
+    <title>India Incorporation - Synergy India Solutions</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add relevant CSS links here, for example: -->
+    <link rel="stylesheet" href="/Synergy-trial/styles.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: #fafbfc;
+            color: #222;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 0;
+        }
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1e88e5;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            padding: 8px 14px;
+            border-radius: 4px;
+            transition: background 0.2s, color 0.2s;
+            font-size: 1rem;
+        }
+        nav ul li a.active,
+        nav ul li a:hover {
+            background: #1e88e5;
+            color: #fff;
+        }
+        .mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: #1e88e5;
+        }
+        @media (max-width: 900px) {
+            .container {
+                padding: 0 12px;
+            }
+            .nav-wrapper {
+                padding: 14px 0;
+            }
+        }
+        @media (max-width: 700px) {
+            .nav-wrapper {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .mobile-toggle {
+                display: block;
+                margin-left: auto;
+            }
+            nav {
+                width: 100%;
+            }
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+                gap: 0;
+                display: none;
+                margin-top: 8px;
+            }
+            nav ul.show {
+                display: flex;
+            }
+            nav ul li {
+                width: 100%;
+            }
+            nav ul li a {
+                display: block;
+                width: 100%;
+                padding: 12px 16px;
+                font-size: 1.1rem;
+            }
+        }
+        .main-content {
+            margin: 32px 0;
+            padding: 24px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 12px rgba(30,136,229,0.06);
+        }
+        @media (max-width: 700px) {
+            .main-content {
+                margin: 18px 0;
+                padding: 12px;
+            }
+        }
+        /* Material Icons for pain-points */
+        .material-icons.icon {
+            vertical-align: middle;
+            font-size: 2rem;
+            color: #1e88e5;
+        }
+        /* Hero, pain-points, benefits, timeline, faq, cta, footer styling retained for appearance */
+        .hero {
+            padding: 4rem 0;
+            background: url('https://source.unsplash.com/1600x600/?India,skyline') center/cover no-repeat;
+            color: #fff;
+            position: relative;
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+        }
+        .hero .container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        .hero h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.125rem;
+            margin-bottom: 1rem;
+        }
+        .btn-primary {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: #1e88e5;
+            color: #fff;
+            border-radius: 0.25rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .pain-points, .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .pain-item, .benefit-item {
+            background: #f9f9f9;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+        .deep-dive {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .deep-dive .text {
+            flex: 1 1 300px;
+        }
+        .deep-dive .visual {
+            flex: 1 1 300px;
+            text-align: center;
+        }
+        .deep-dive .visual img {
+            max-width: 100%;
+            border-radius: 0.5rem;
+        }
+        .timeline {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .timeline-step {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .timeline-step::before {
+            content: attr(data-step);
+            font-weight: bold;
+            color: #fb8c00;
+        }
+        .faq {
+            margin: 1rem 0;
+        }
+        .faq-item + .faq-item {
+            margin-top: 1rem;
+        }
+        .faq-item summary {
+            cursor: pointer;
+            font-weight: bold;
+        }
+        footer {
+            background: #f1f1f1;
+            padding: 1rem 0;
+            text-align: center;
+            font-size: 0.875rem;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400&family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <ul>
-          <li><a href="incorporation.html" class="active">India Incorporation</a></li>
-          <li><a href="cfo.html">Virtual CFO Services</a></li>
-          <li><a href="imports.html">Imports & Logistics</a></li>
-          <li><a href="expansion.html">Expansion & Sourcing</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <header>
+        <div class="container nav-wrapper">
+            <a href="/Synergy-trial/index.html" class="logo">Synergy India Solutions</a>
+            <button class="mobile-toggle" id="menu-toggle">&#9776;</button>
+            <nav>
+                <ul id="menu">
+                    <li><a href="/Synergy-trial/services/incorporation.html" class="active">India Incorporation</a></li>
+                    <li><a href="/Synergy-trial/services/cfo.html">Virtual CFO Services</a></li>
+                    <li><a href="/Synergy-trial/services/imports.html">Imports & Logistics</a></li>
+                    <li><a href="/Synergy-trial/services/expansion.html">Expansion & Sourcing</a></li>
+                    <li><a href="/Synergy-trial/case-studies.html">Case Studies</a></li>
+                    <li><a href="/Synergy-trial/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <script>
+      document.getElementById('menu-toggle').addEventListener('click', () => {
+        document.getElementById('menu').classList.toggle('show');
+      });
+    </script>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <h1>Effortless Company Formation in India</h1>
-      <p>Set up your business in India seamlessly with our expert-led incorporation services. Whether you’re launching a subsidiary, branch office, or new private limited entity, we ensure full compliance, speed, and peace of mind.</p>
-      <a href="#contact" class="btn-primary">Book a Free Consult</a>
-    </div>
-  </section>
+    <main>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="container">
+                <h1>Effortless Company Formation in India</h1>
+                <p>Set up your business in India seamlessly with our expert-led incorporation services. Whether you’re launching a subsidiary, branch office, or new private limited entity, we ensure full compliance and speed.</p>
+                <a href="#contact" class="btn-primary">Book a Free Consult</a>
+            </div>
+        </section>
 
-  <!-- Pain Points -->
-  <section class="container pain-points">
-    <div class="pain-item">
-      <span class="material-icons icon">gavel</span>
-      <p>Bureaucracy overload?</p>
-    </div>
-    <div class="pain-item">
-      <span class="material-icons icon">domain</span>
-      <p>Entity confusion?</p>
-    </div>
-    <div class="pain-item">
-      <span class="material-icons icon">account_balance</span>
-      <p>Banking hurdles?</p>
-    </div>
-    <div class="pain-item">
-      <span class="material-icons icon">receipt</span>
-      <p>Tax registrations?</p>
-    </div>
-  </section>
+        <!-- Pain Points -->
+        <section class="container pain-points">
+            <div class="pain-item">
+                <span class="material-icons icon">gavel</span>
+                <p>Bureaucracy overload?</p>
+            </div>
+            <div class="pain-item">
+                <span class="material-icons icon">domain</span>
+                <p>Entity confusion?</p>
+            </div>
+            <div class="pain-item">
+                <span class="material-icons icon">account_balance</span>
+                <p>Banking hurdles?</p>
+            </div>
+            <div class="pain-item">
+                <span class="material-icons icon">receipt</span>
+                <p>Tax registrations?</p>
+            </div>
+        </section>
 
-  <!-- Deep Dive -->
-  <section class="container deep-dive">
-    <div class="text">
-      <h2>Our Incorporation Services Include</h2>
-      <h3>Entity Structure Advisory</h3>
-      <p>Get strategic guidance on choosing between a Private Limited Company, LLP, Branch Office, Liaison Office, or Wholly-Owned Subsidiary.</p>
+        <!-- Deep Dive -->
+        <section class="container deep-dive">
+            <div class="text">
+                <h2>Our Incorporation Services Include</h2>
+                <h3>Entity Structure Advisory</h3>
+                <p>Get strategic guidance on choosing between a Private Limited Company, LLP, Branch Office, Liaison Office, or Wholly-Owned Subsidiary.</p>
+                <h3>Document Preparation & Filing</h3>
+                <p>We handle all MoA, AoA, DIN, PAN, and TAN registrations, ensuring error-free documentation.</p>
+                <h3>Name Approval & Company Registration (MCA)</h3>
+                <p>Fast-tracked through our close liaison with the Registrar of Companies for swift name approvals and filings.</p>
+                <h3>Opening Bank Accounts</h3>
+                <p>Assistance with RBI compliance, documentation, and introductions to leading banking partners for smooth account setup.</p>
+                <h3>GST & Other Tax Registrations</h3>
+                <p>Comprehensive GST, VAT, and professional tax registrations to keep you fully compliant from Day One.</p>
+                <h3>Registered Office & Secretarial Services</h3>
+                <p>Use our premium registered office address or let us help you secure your own, alongside ongoing company secretarial support.</p>
+            </div>
+            <div class="visual">
+                <img src="https://as2.ftcdn.net/v2/jpg/02/11/39/51/1000_F_211395193_ILTeSLFdGh1LIVxYwCcjGLcUCDBxiwTr.jpg" alt="Team collaborating on paperwork">
+            </div>
+        </section>
 
-      <h3>Document Preparation & Filing</h3>
-      <p>We handle all MoA, AoA, DIN, PAN, and TAN registrations, ensuring error-free documentation.</p>
+        <!-- Benefits -->
+        <section class="container benefits">
+            <div class="benefit-item">
+                <span>⚡</span>
+                <h3>Lightning-Fast Turnaround</h3>
+                <p>Get incorporated in as little as 7 working days.</p>
+            </div>
+            <div class="benefit-item">
+                <span>✅</span>
+                <h3>End-to-End Compliance</h3>
+                <p>From Doc Prep to Licences—one-stop solution with zero gaps.</p>
+            </div>
+            <div class="benefit-item">
+                <span>🌐</span>
+                <h3>Multilingual Support</h3>
+                <p>We speak your language and navigate local nuances effortlessly.</p>
+            </div>
+            <div class="benefit-item">
+                <span>🤝</span>
+                <h3>Dedicated Account Manager</h3>
+                <p>Single point of contact from incorporation through operations.</p>
+            </div>
+        </section>
 
-      <h3>Name Approval & Company Registration (MCA)</h3>
-      <p>Fast-tracked through our close liaison with the Registrar of Companies for swift name approvals and filings.</p>
+        <!-- Timeline -->
+        <section class="container timeline">
+            <div class="timeline-step" data-step="1."><p>Discovery & Requirement Gathering</p></div>
+            <div class="timeline-step" data-step="2."><p>Entity Selection & Documentation</p></div>
+            <div class="timeline-step" data-step="3."><p>Name Approval & Filing</p></div>
+            <div class="timeline-step" data-step="4."><p>Bank & Tax Registrations</p></div>
+            <div class="timeline-step" data-step="5."><p>Company Commencement & Ongoing Support</p></div>
+        </section>
 
-      <h3>Opening Bank Accounts</h3>
-      <p>Assistance with RBI compliance, documentation, and introductions to leading banking partners for smooth account setup.</p>
+        <!-- FAQ -->
+        <section class="container faq">
+            <details class="faq-item">
+                <summary>What types of entities can I register?</summary>
+                <p>We cover Pvt Ltd, LLP, Branch Offices, Liaison Offices, and Wholly-Owned Subsidiaries based on your needs.</p>
+            </details>
+            <details class="faq-item">
+                <summary>How long does incorporation take?</summary>
+                <p>Typically 5–7 working days, depending on ROC workload and name approval timelines.</p>
+            </details>
+            <details class="faq-item">
+                <summary>Can you help open a bank account?</summary>
+                <p>Yes—our team coordinates with top banks and handles all documentation for a smooth setup.</p>
+            </details>
+        </section>
 
-      <h3>GST & Other Tax Registrations</h3>
-      <p>Comprehensive GST, VAT, and professional tax registrations to keep you fully compliant from Day One.</p>
+        <!-- Final CTA -->
+        <section id="contact" class="container" style="text-align: center; padding: 4rem 0;">
+            <h2>Ready to Launch in India?</h2>
+            <a href="mailto:contact@synergyindia.com" class="btn-primary">Schedule a Call</a>
+        </section>
+    </main>
 
-      <h3>Registered Office & Secretarial Services</h3>
-      <p>Use our premium registered office address or let us help you secure your own, alongside ongoing company secretarial support.</p>
-    </div>
-    <div class="visual">
-      <img src="https://as2.ftcdn.net/v2/jpg/02/11/39/51/1000_F_211395193_ILTeSLFdGh1LIVxYwCcjGLcUCDBxiwTr.jpg" alt="Team collaborating on paperwork">
-    </div>
-  </section>
-
-  <!-- Benefits -->
-  <section class="container benefits">
-    <div class="benefit-item">
-      <span>⚡</span>
-      <h3>Lightning-Fast Turnaround</h3>
-      <p>Get incorporated in as little as 7 working days.</p>
-    </div>
-    <div class="benefit-item">
-      <span>✅</span>
-      <h3>End-to-End Compliance</h3>
-      <p>From Doc Prep to Licences—one-stop solution with zero gaps.</p>
-    </div>
-    <div class="benefit-item">
-      <span>🌐</span>
-      <h3>Multilingual Support</h3>
-      <p>We speak your language and navigate local nuances effortlessly.</p>
-    </div>
-    <div class="benefit-item">
-      <span>🤝</span>
-      <h3>Dedicated Account Manager</h3>
-      <p>Single point of contact from incorporation through operations.</p>
-    </div>
-  </section>
-
-  <!-- Timeline -->
-  <section class="container timeline">
-    <div class="timeline-step" data-step="1."><p>Discovery & Requirement Gathering</p></div>
-    <div class="timeline-step" data-step="2."><p>Entity Selection & Documentation</p></div>
-    <div class="timeline-step" data-step="3."><p>Name Approval & Filing</p></div>
-    <div class="timeline-step" data-step="4."><p>Bank & Tax Registrations</p></div>
-    <div class="timeline-step" data-step="5."><p>Company Commencement & Ongoing Support</p></div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="container faq">
-    <details class="faq-item">
-      <summary>What types of entities can I register?</summary>
-      <p>We cover Pvt Ltd, LLP, Branch Offices, Liaison Offices, and Wholly-Owned Subsidiaries based on your needs.</p>
-    </details>
-    <details class="faq-item">
-      <summary>How long does incorporation take?</summary>
-      <p>Typically 5–7 working days, depending on ROC workload and name approval timelines.</p>
-    </details>
-    <details class="faq-item">
-      <summary>Can you help open a bank account?</summary>
-      <p>Yes—our team coordinates with top banks and handles all documentation for a smooth setup.</p>
-    </details>
-  </section>
-
-  <!-- Final CTA -->
-  <section id="contact" class="container" style="text-align: center; padding: 4rem 0;">
-    <h2>Ready to Launch in India?</h2>
-    <a href="mailto:contact@synergyindia.com" class="btn-primary">Schedule a Call</a>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>&copy; 2025 Synergy India Solutions — All rights reserved.</p>
-    </div>
-  </footer>
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Synergy India Solutions — All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
